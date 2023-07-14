@@ -21,8 +21,8 @@ io.on('connection', (socket) => {
     readyPlayerCount++;
 
     if (readyPlayerCount === 2) {
-      io.emit("startGame", socket.id);
-    }
+      io.emit("startgame", socket.id);
+    };
   })
 });
 
