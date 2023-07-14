@@ -32,5 +32,9 @@ io.on('connection', (socket) => {
   socket.on("ballMove", (ballData) => {
     socket.broadcast.emit("ballMove", ballData);
   });
+
+  socket.on("disconnect", (reason) => {
+    console.log(`Client ${socket.id} disconnected due to ${reason}`);
+  })
 });
 
